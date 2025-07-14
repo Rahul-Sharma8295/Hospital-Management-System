@@ -11,7 +11,7 @@ public class Reception extends JFrame
         JPanel panel=new JPanel();
         panel.setLayout(null);
         panel.setBounds(5,160,1525,670);
-        panel.setBackground(new Color(109,164,170));
+        panel.setBackground(Color.white);
         add(panel);
 
         JPanel panel1=new JPanel();
@@ -35,6 +35,14 @@ public class Reception extends JFrame
         label1.setBounds(1000,50,300,100);
         panel1.add(label1);
 
+   // Adding image to second panel
+        ImageIcon i5 = new ImageIcon(ClassLoader.getSystemResource("icon/sai-hospital.png"));
+        Image image2 = i5.getImage().getScaledInstance(1525, 670, Image.SCALE_DEFAULT);
+        ImageIcon i6 = new ImageIcon(image2);
+        JLabel label2 = new JLabel(i6);
+        label2.setBounds(20, 20, 1485, 630);
+        panel.add(label2);
+
 //        adding new petient button
        JButton btn1=new JButton("Add new Petient");
        btn1.setBounds(30,15,200,30);
@@ -56,7 +64,7 @@ public class Reception extends JFrame
         btn2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new Room();
             }
         });
 
@@ -67,7 +75,7 @@ public class Reception extends JFrame
         btn3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                    new Department();
             }
         });
 
@@ -78,7 +86,7 @@ public class Reception extends JFrame
         btn4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                    new Employee_Info();
             }
         });
 
@@ -89,7 +97,7 @@ public class Reception extends JFrame
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new Patient_Info();
             }
         });
 
@@ -100,7 +108,7 @@ public class Reception extends JFrame
         btn6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                  new Patient_Discharge();
             }
         });
 
@@ -112,7 +120,7 @@ public class Reception extends JFrame
         btn7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new Update_Patient();
             }
         });
 
@@ -121,21 +129,22 @@ public class Reception extends JFrame
         btn8.setBounds(510,58,200,30);
         btn8.setBackground(new Color(246,215,118));
         panel1.add(btn8);
-        btn3.addActionListener(new ActionListener() {
+        btn8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                new Ambulancee();
             }
         });
 
 
-        JButton btn9=new JButton("Seach Button ");
+        JButton btn9=new JButton("Search Button ");
         btn9.setBounds(510,100,200,30);
         btn9.setBackground(new Color(246,215,118));
         panel1.add(btn9);
         btn9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                new Search_Room();
 
             }
         });

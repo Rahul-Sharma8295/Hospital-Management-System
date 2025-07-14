@@ -4,6 +4,8 @@ import net.proteanit.sql.DbUtils;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.ResultSet;
 
 public class Room extends JFrame {
@@ -24,7 +26,7 @@ public class Room extends JFrame {
         panel.add(label);
 
         table=new JTable();
-        table.setBounds(10,40,500,400);
+        table.setBounds(10,40,500,300);
         table.setForeground(new Color(90,156,163));
         panel.add(table);
 
@@ -56,11 +58,28 @@ public class Room extends JFrame {
         panel.add(label3);
 
 
+        JLabel label4=new JLabel("Bed Type");
+        label4.setBounds(400,15,100,15);
+        label4.setFont(new Font("Tahoma",Font.BOLD,14));
+        panel.add(label4);
 
 
+        JButton back=new JButton("Back");
+        back.setBounds(200,400,120,30);
+        back.setBackground(Color.BLACK);
+        back.setForeground(Color.WHITE);
+        panel.add(back);
+        back.addActionListener(new ActionListener()
+        {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                setVisible(false);
+
+            }
+        });
 
 
-
+        setUndecorated(true);
         setSize(900,600);
         setLayout(null);
         setLocation(300,230);

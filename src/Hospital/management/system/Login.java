@@ -16,55 +16,55 @@ public class Login extends JFrame implements ActionListener {
     {
 //username Label
         JLabel nameLabel=new JLabel("USER NAME - ");
-        nameLabel.setBounds(40,100,150,30);
+        nameLabel.setBounds(150,200,150,30);
         nameLabel.setFont(new Font("Tohoma",Font.BOLD,20));
         nameLabel.setForeground(new Color(13, 11, 11));
         add(nameLabel);
 
 //password label
         JLabel password=new JLabel("Password  -");
-        password.setBounds(40,140,150,30);
+        password.setBounds(150,250,150,30);
         password.setFont(new Font("Tohoma",Font.BOLD,20));
         password.setForeground(new Color(0,0,0));
         add(password);
 
 //username field
         textField=new JTextField();
-        textField.setBounds(200,100,250,30);
+        textField.setBounds(300,200,250,30);
         textField.setFont(new Font("Tahoma",Font.PLAIN,20));
         textField.setBackground(new Color(236, 234, 228));
         add(textField);
 
 //passwordFiled
         passwordFiled=new JPasswordField();
-        passwordFiled.setBounds(200,140,250,30);
+        passwordFiled.setBounds(300,250,250,30);
         passwordFiled.setFont(new Font("Tohoma",Font.PLAIN,20));
         passwordFiled.setBackground(new Color(236,234,228));
         add(passwordFiled);
 
 //Image
-        ImageIcon imageIcon=new ImageIcon(ClassLoader.getSystemResource("icon/login.png"));
-        Image i1=imageIcon.getImage().getScaledInstance(200,200,Image.SCALE_DEFAULT);
+        ImageIcon imageIcon=new ImageIcon(ClassLoader.getSystemResource("icon/download.jpeg"));
+        Image i1=imageIcon.getImage().getScaledInstance(180,180,Image.SCALE_DEFAULT);
         ImageIcon imageIcon1=new ImageIcon(i1);
         JLabel label=new JLabel(imageIcon1);
-        label.setBounds(-110,-100,400,300);
+        label.setBounds(-90,-50,400,300);
         add(label);
 //Button
 
         b1=new JButton("Login");
-        b1.setBounds(70,200,100,30);
+        b1.setBounds(220,350,100,30);
         b1.setFont(new Font("serif",Font.BOLD,15));
         b1.addActionListener(this);
         add(b1);
 
         b2=new JButton("Cancel");
-        b2.setBounds(200,200,100,30);
+        b2.setBounds(350,350,100,30);
         b2.setFont(new Font("serif",Font.BOLD,15));
         b2.addActionListener(this);
         add(b2);
 
         getContentPane().setBackground(new Color(109,164,170));
-        setSize(500,400);
+        setSize(700,600);
         setLocation(500,150);
         setLayout(null);
         setVisible(true);
@@ -109,3 +109,6 @@ public class Login extends JFrame implements ActionListener {
 
 
 }
+
+
+
